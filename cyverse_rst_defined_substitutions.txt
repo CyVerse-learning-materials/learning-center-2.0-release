@@ -1,32 +1,20 @@
 .. Comment: URLS
 
-.. |CyVerse User Portal| raw:: html
+.. |Agave API| raw:: html
 
-  <a href="https://user.cyverse.org/" target="_blank">CyVerse User Portal</a>
+   <a href="https://agaveapi.co" target="blank">Agave API</a>
 
-.. |Data Store| raw:: html
+.. |Agave Live Docs| raw:: html
 
-  <a href="http://www.cyverse.org/data-store" target="_blank">Data Store</a>
+   <a href="https://agaveapi.co" target="blank">Agave Live Docs</a>
 
-.. |Data Store Manual| raw:: html
+.. |Agave Guide| raw:: html
 
-   <a href="https://wiki.cyverse.org/wiki/display/DS/Data+Store+Table+of+Contents" target="blank">Data Store Manual</a>
+   <a href="http://learning.cyverse.org/en/latest/" target="blank">Agave Guide</a>
 
-.. |Data Store Guide| raw:: html
+.. |Ask CyVerse| raw:: html
 
-   <a href="https://cyverse-data-store-guide.readthedocs-hosted.com/en/latest/" target="blank">Data Store Guide</a>
-
-.. |Discovery Environment| raw:: html
-
-   <a href="https://de.cyverse.org/de/" target="blank">Discovery Environment</a>
-
-.. |DE Manual| raw:: html
-
-   <a href="https://wiki.cyverse.org/wiki/display/DEmanual/Table+of+Contents" target="blank">DE Manual</a>
-
-.. |Discovery Environment Guide| raw:: html
-
-   <a href="http://learning.cyverse.org/projects/cyverse-discovery-environment-guide/" target="blank">Discovery Environment Guide</a>
+   <a href="http://ask.iplantcollaborative.org/questions" target="blank">Ask CyVerse</a>
 
 .. |Atmosphere| raw:: html
 
@@ -52,6 +40,42 @@
 
    <a href="http://learning.cyverse.org/en/latest/" target="blank">BisQue Guide</a>
 
+.. |CyVerse User Portal| raw:: html
+
+  <a href="https://user.cyverse.org/" target="_blank">CyVerse User Portal</a>
+
+.. |CyVerse Learning Center| raw:: html
+
+   <a href="http://learning.cyverse.org" target="blank">CyVerse Learning Center</a>
+
+.. |CyVerse Wiki| raw:: html
+
+   <a href="https://wiki.cyverse.org" target="blank">CyVerse Wiki</a>
+
+.. |Data Store| raw:: html
+
+  <a href="http://www.cyverse.org/data-store" target="_blank">Data Store</a>
+
+.. |Data Store Manual| raw:: html
+
+   <a href="https://wiki.cyverse.org/wiki/display/DS/Data+Store+Table+of+Contents" target="blank">Data Store Manual</a>
+
+.. |Data Store Guide| raw:: html
+
+   <a href="https://cyverse-data-store-guide.readthedocs-hosted.com/en/latest/" target="blank">Data Store Guide</a>
+
+.. |Discovery Environment| raw:: html
+
+   <a href="https://de.cyverse.org/de/" target="blank">Discovery Environment</a>
+
+.. |DE Manual| raw:: html
+
+   <a href="https://wiki.cyverse.org/wiki/display/DEmanual/Table+of+Contents" target="blank">DE Manual</a>
+
+.. |Discovery Environment Guide| raw:: html
+
+   <a href="http://learning.cyverse.org/projects/cyverse-discovery-environment-guide/" target="blank">Discovery Environment Guide</a>
+
 .. |DNA Subway| raw:: html
 
    <a href="https://dnasubway.cyverse.org/" target="blank">DNA Subway</a>
@@ -64,17 +88,7 @@
 
    <a href="https://cyverse-dnasubway-guide.readthedocs-hosted.com/en/latest/" target="blank">DNA Subway Guide</a>
 
-.. |Agave API| raw:: html
 
-   <a href="https://agaveapi.co" target="blank">Agave API</a>
-
-.. |Agave Live Docs| raw:: html
-
-   <a href="https://agaveapi.co" target="blank">Agave Live Docs</a>
-
-.. |Agave Guide| raw:: html
-
-   <a href="http://learning.cyverse.org/en/latest/" target="blank">Agave Guide</a>
 
 .. |SciApps| raw:: html
 
@@ -87,18 +101,6 @@
 .. |SciApps Guide| raw:: html
 
    <a href="https://cyverse-sciapps-guide.readthedocs-hosted.com/en/latest/index.html" target="blank">SciApps Guide</a>
-
-.. |Ask CyVerse| raw:: html
-
-   <a href="http://ask.iplantcollaborative.org/questions" target="blank">Ask CyVerse</a>
-
-.. |CyVerse Learning Center| raw:: html
-
-   <a href="http://learning.cyverse.org" target="blank">CyVerse Learning Center</a>
-
-.. |CyVerse Wiki| raw:: html
-
-   <a href="https://wiki.cyverse.org" target="blank">CyVerse Wiki</a>
 
 
 .. Comment: images
