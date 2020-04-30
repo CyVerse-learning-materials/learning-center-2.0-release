@@ -1,20 +1,5 @@
 .. Comment: URLS
 
-.. |Agave API| raw:: html
-
-   <a href="https://agaveapi.co" target="blank">Agave API</a>
-
-.. |Agave Live Docs| raw:: html
-
-   <a href="https://agaveapi.co" target="blank">Agave Live Docs</a>
-
-.. |Agave Guide| raw:: html
-
-   <a href="http://learning.cyverse.org/en/latest/" target="blank">Agave Guide</a>
-
-.. |Ask CyVerse| raw:: html
-
-   <a href="http://ask.iplantcollaborative.org/questions" target="blank">Ask CyVerse</a>
 
 .. |Atmosphere| raw:: html
 
@@ -26,7 +11,7 @@
 
 .. |Atmosphere Guide| raw:: html
 
-   <a href="https://cyverse-atmosphere-guide.readthedocs-hosted.com/en/latest/" target="blank">Atmosphere Guide</a>
+   <a href="https://learning.cyverse.org/projects/atmosphere-guide/en/latest/" target="blank">Atmosphere Guide</a>
 
 .. |BisQue| raw:: html
 
@@ -35,10 +20,6 @@
 .. |BisQue Manual| raw:: html
 
    <a href="https://wiki.cyverse.org/wiki/display/BIS" target="blank">BisQue Manual</a>
-
-.. |BisQue Guide| raw:: html
-
-   <a href="http://learning.cyverse.org/en/latest/" target="blank">BisQue Guide</a>
 
 .. |CyVerse User Portal| raw:: html
 
@@ -62,7 +43,7 @@
 
 .. |Data Store Guide| raw:: html
 
-   <a href="https://cyverse-data-store-guide.readthedocs-hosted.com/en/latest/" target="blank">Data Store Guide</a>
+   <a href="https://learning.cyverse.org/projects/data_store_guide/en/latest/" target="blank">Data Store Guide</a>
 
 .. |Discovery Environment| raw:: html
 
@@ -82,12 +63,11 @@
 
 .. |DNA Subway Manual| raw:: html
 
-   <a href="https://cyverse-dnasubway-guide.readthedocs-hosted.com/en/latest/" target="blank">DNA Subway Manual</a>
+   <a href="https://learning.cyverse.org/projects/dnasubway_guide/en/latest/" target="blank">DNA Subway Manual</a>
 
 .. |DNA Subway Guide| raw:: html
 
-   <a href="https://cyverse-dnasubway-guide.readthedocs-hosted.com/en/latest/" target="blank">DNA Subway Guide</a>
-
+   <a href="https://learning.cyverse.org/projects/dnasubway_guide/en/latest/" target="blank">DNA Subway Guide</a>
 
 
 .. |SciApps| raw:: html
@@ -96,23 +76,42 @@
 
 .. |SciApps Manual| raw:: html
 
-   <a href="https://cyverse-sciapps-guide.readthedocs-hosted.com/en/latest/index.html" target="blank">SciApps Manual</a>
+   <a href="https://learning.cyverse.org/projects/sciapps_guide/en/latest/" target="blank">SciApps Manual</a>
 
 .. |SciApps Guide| raw:: html
 
-   <a href="https://cyverse-sciapps-guide.readthedocs-hosted.com/en/latest/index.html" target="blank">SciApps Guide</a>
+   <a href="https://learning.cyverse.org/projects/sciapps_guide/en/latest/" target="blank">SciApps Guide</a>
+
+.. |Terrain DE API Docs| raw:: html
+
+   <a href="https://cyverse-de.github.io/api/" target="blank">Terrain DE API Docs</a>
+
+.. |Tapis TACC API| raw:: html
+
+   <a href="https://www.tacc.utexas.edu/tapis" target="blank">Tapis TACC API</a>
 
 
-.. Comment: images
 
-.. |CyVerse logo| image:: ./img/cyverse_rgb.png
-    :width: 500
-    :height: 100
-.. _CyVerse logo: http://learning.cyverse.org/
-.. |Home_Icon| image:: ./img/homeicon.png
-    :width: 25
-    :height: 25
-.. _Home_Icon: http://learning.cyverse.org/
-.. |Intercom| image:: ./img/intercom.png
-    :width: 25
-    :height: 25
+.. Comment: Deprecated links  - these may appear in our documentation but
+   currently refer to dead URLS with no equivalent redirects.
+
+
+.. |Ask CyVerse| raw:: html
+
+   <a href="http://ask.iplantcollaborative.org/questions" target="blank">Ask CyVerse</a>
+
+.. |Agave Guide| raw:: html
+
+   <a href="http://learning.cyverse.org/en/latest/" target="blank">Agave Guide</a>
+
+.. |Agave API| raw:: html
+
+   <a href="http://developer.agaveapi.co/#introduction" target="blank">Agave API</a>
+
+.. |Agave Live Docs| raw:: html
+
+   <a href="https://agaveapi.co" target="blank">Agave Live Docs</a>
+
+.. |BisQue Guide| raw:: html
+
+   <a href="http://learning.cyverse.org/en/latest/" target="blank">BisQue Guide</a>
