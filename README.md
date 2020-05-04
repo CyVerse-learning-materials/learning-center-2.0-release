@@ -7,7 +7,7 @@ This repo contains a master list of URLs that all CyVerse learning materials can
 pull from.
 
 
-## 2.0 Upgraded Files 
+## 2.0 Upgraded Files
 
 |file|Notes|Location to place in the target repo (relative to top level directory)|
 |----|-----|------------------------------------|
@@ -24,26 +24,39 @@ pull from.
 |`custom_urls.txt`\*|repo-specific of URLS|`custom_urls.txt`|
 |`README.md`\*|Project Readme|`README.md`|
 
-\* - These files may have some project-specific features so you should not automatically copy over existing files. 
+\* - These files may have some project-specific features so you should not automatically copy over existing files.
 
 
 
-### upgrading a repo to 2.0 
+### upgrading a repo to 2.0
 
-In many cases you can atomatically upgrade an existing repo to the 2.0 spec. Here are the steps. 
+In many cases you can atomatically upgrade an existing repo to the 2.0 spec.
+Here are the steps.
 
-1. Clone this repo to a location on your computer (e.g. `~/local_cyverse_learning_center`)
+1. Clone this repo to a location on your computer
+   (e.g. `~/local_cyverse_learning_center`)
 
-       cd ~/local_cyverse_learning_center
-       git clone https://github.com/CyVerse-learning-materials/learning-center-2.0-release.git
-       
-2. Clone the learning center repo you want to upgrade (e.g. `my_quickstart`)ls
+       $ cd ~/local_cyverse_learning_center
+       $ git clone https://github.com/CyVerse-learning-materials/learning-center-2.0-release.git
 
+2. Clone the learning center repo(s) you want to upgrade (e.g. `my_quickstart`)
 
-       git clone REPO GIT URL
+       $ git clone REPO GIT URL
 
+3. Create a textfile called `repos.txt` each line in the file should be the path
+   to the repo(s) you want to upgrade. For example if you downloaded
+   `my_quickstart_1`, `my_quickstart_2`, `my_quickstart_3`
+   to `~/local_cyverse_learning_center` you could generate this textfile as
+   follows:
 
+       $ cd ~/local_cyverse_learning_center$
+       $ ls -d */ | sed 's#/##' >>repos.txt
 
+4. Run the `upgrade.sh` script 
+
+       $ bash upgrade.sh
+
+This script will copy new files/versions into the repos
 
 ## How to use for maintain links in your CyVerse learning materials
 

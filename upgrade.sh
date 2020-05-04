@@ -1,7 +1,5 @@
-
-
 #!/bin/bash
-
+# CyVerse Learning Center 2.0 Release Script May 2020
 
 # get list of repo folders to upgrade
 input="repos.txt"
@@ -11,26 +9,28 @@ do
  do
   echo "Upgrading" $line
   mkdir -p $repo/./github/ISSUE_TEMPLATE/
-  echo "Copying 1 of 10 - triage-for-2-0-release.md to" $line
+  echo "Copying 1 of 11 - triage-for-2-0-release.md to" $line
   cp learning-center-2.0-release/triage-for-2-0-release.md $repo/./github/ISSUE_TEMPLATE/
-  echo "Copying 2 of 10 - cyverse.css to" $line
+  echo "Copying 2 of 11 - cyverse.css to" $line
   cp learning-center-2.0-release/cyverse.css $repo/misc/static/
-  echo "Copying 3 of 10 - cyverse.js to" $line
+  echo "Copying 3 of 11 - cyverse.js to" $line
   cp learning-center-2.0-release/cyverse.js $repo/misc/static/
-  echo "Copying 4 of 10 - detail-expand.css to" $line
+  echo "Copying 4 of 11 - detail-expand.css to" $line
   cp learning-center-2.0-release/detail-expand.css $repo/misc/static/
-  echo "Copying 5 of 10 - intercom-script-for-learning.js to" $line
+  echo "Copying 5 of 11 - intercom-script-for-learning.js to" $line
   cp learning-center-2.0-release/intercom-script-for-learning.js $repo/misc/static/
-  echo "Copying 6 of 10 - question-answer.js to" $line
+  echo "Copying 6 of 11 - question-answer.js to" $line
   cp learning-center-2.0-release/question-answer.js $repo/misc/static/
-  echo "Copying 7 of 10 - jquery.tablesorter.min.js to" $line
+  echo "Copying 7 of 11 - jquery.tablesorter.min.js to" $line
   cp learning-center-2.0-release/jquery.tablesorter.min.js $repo/misc/static/
-  echo "Copying 8 of 10 - custom_urls.txt to" $line
+  echo "Copying 8 of 11 - custom_urls.txt to" $line
   cp learning-center-2.0-release/custom_urls.txt $repo/
-  echo "Copying 9 of 10 - cyverse_learning.png to" $line
+  echo "Copying 9 of 11 - cyverse_learning.png to" $line
   cp learning-center-2.0-release/img/cyverse_learning.png $repo/img/cyverse_learning.png
-  echo "Copying 10 of 10 - intercom.png to" $line
+  echo "Copying 10 of 11 - intercom.png to" $line
   cp learning-center-2.0-release/img/intercom.png $repo/img/intercom.png
+  echo "Copying 11 of 11 - License.md to" $line
+  cp learning-center-2.0-release/License.md $repo/License.md
   echo "fix logo"
   perl -i -p0e 's/\|CyVerse logo\|_/\|CyVerse_logo\|_/smg' $repo/*.rst
   perl -i -p0e 's/\|CyVerse logo\| image:: .\/img\/cyverse_rgb.png/\|CyVerse_logo\| image:: .\/img\/cyverse_learning.png/smg' $repo/cyverse_rst_defined_substitutions.txt
