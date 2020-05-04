@@ -17,10 +17,10 @@ pull from.
 |`detail-expand.css` |Repo css|`misc/static/detail-expand.css`|
 |`intercom-script-for-learning.js`|Intercom js|`misc/static/intercom-script-for-learning.js`|
 |`question-answer.js`|Q&A js|`misc/static/question-answer.js`|
-|`jquery.min.js`|Repo css|`misc/static/jquery.min.js`|
+|`jquery.tablesorter.min.js`|Repo css|`misc/static/jquery.tablesorter.min.js`|
 |`cyverse_spinx_conf.py`\*|sphinx config file|`misc/cyverse_spinx_conf.py`|
 |`conf.py`\*|sphinx config|`conf.py`|
-|`cyverse_rst_defined_substitutions.txt`|list of URLS|`cyverse_rst_defined_substitutions.txt`|
+|`cyverse_rst_defined_substitutions.txt`\*|list of URLS|`cyverse_rst_defined_substitutions.txt`|
 |`custom_urls.txt`\*|repo-specific of URLS|`custom_urls.txt`|
 |`README.md`\*|Project Readme|`README.md`|
 
@@ -35,7 +35,12 @@ In many cases you can atomatically upgrade an existing repo to the 2.0 spec. Her
 1. Clone this repo to a location on your computer (e.g. `~/local_cyverse_learning_center`)
 
        cd ~/local_cyverse_learning_center
-       git clone 
+       git clone https://github.com/CyVerse-learning-materials/learning-center-2.0-release.git
+       
+2. Clone the learning center repo you want to upgrade (e.g. `my_quickstart`)ls
+
+
+       git clone REPO GIT URL
 
 
 
