@@ -56,7 +56,11 @@ Here are the steps.
 
        $ bash upgrade.sh
 
-This script will copy new files/versions into the repos
+5. This script will copy new files/versions into the repo and attempt to replace some of the logos and texts in existing files. **This may break the repo to be upgraded**. An HTML file with a preview build will be created (e.g. `my_repo/_build`). Please preview every page in the repo and ensure things look good. 
+
+6. Once you have made changes, push the needed repo back to github. Then create an issue (there should now be a template issue `Triage for Release`). Create the issue (**Please make sure the repo name is in the issue title**). Do your best to complete the checklist and then notify Tutorials@cyverse.org your repo is ready for the 2.0 release. 
+
+
 
 ## How to use for maintain links in your CyVerse learning materials
 
