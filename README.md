@@ -24,7 +24,8 @@ pull from.
 |`custom_urls.txt`\*|repo-specific of URLS|`custom_urls.txt`|
 |`README.md`\*|Project Readme|`README.md`|
 
-\* - These files may have some project-specific features so you should not automatically copy over existing files.
+\* - These files may have some project-specific features so you should not
+automatically copy over existing files.
 
 
 
@@ -52,29 +53,57 @@ Here are the steps.
        $ cd ~/local_cyverse_learning_center$
        $ ls -d */ | sed 's#/##' >>repos.txt
 
-4. Run the `upgrade.sh` script 
+4. Run the `upgrade.sh` script
 
        $ bash upgrade.sh
 
-5. This script will copy new files/versions into the repo and attempt to replace some of the logos and texts in existing files. **This may break the repo to be upgraded**. An HTML file with a preview build will be created (e.g. `my_repo/_build`). Please preview every page in the repo and ensure things look good. 
+5. This script will copy new files/versions into the repo and attempt to replace
+   some of the logos and texts in existing files. **This may break the repo to
+   be upgraded**. An HTML file with a preview build will be created (e.g.
+     `my_repo/_build`). Please preview every page in the repo and ensure things
+     look good.
 
-6. Once you have made changes, push the needed repo back to github. Then create an issue (there should now be a template issue `Triage for Release`). Create the issue (**Please make sure the repo name is in the issue title**). Do your best to complete the checklist and then notify Tutorials@cyverse.org your repo is ready for the 2.0 release. 
+6. Once you have made changes, push the needed repo back to github. Then create
+   an issue (there should now be a template issue `Triage for Release`). Create
+   the issue (**Please make sure the repo name is in the issue title**). Do your
+   best to complete the checklist and then notify Tutorials@cyverse.org your
+   repo is ready for the 2.0 release.
 
 
 
 ## How to use for maintain links in your CyVerse learning materials
 
-CyVerse uses [RestructuredText](https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html) (RST)
-to build documentation. To add links within your documentation, RST allows you
-a few ways, but the preferred way is to use a [substitution](https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#substitution-definitions). Combined with the [include](https://docutils.sourceforge.io/docs/ref/rst/directives.html#including-an-external-document-fragment) directive we can have a single page with all the URLs for links in the documentation. If a link changes, this means you can update a single page and fix the link everywhere it appears.
+CyVerse uses
+[RestructuredText](https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html)
+(RST) to build documentation. To add links within your documentation, RST allows
+you a few ways, but the preferred way is to use a
+[substitution](https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#substitution-definitions)
+. Combined with the
+[include](https://docutils.sourceforge.io/docs/ref/rst/directives.html#including-an-external-document-fragment) directive we can have a single page with all the URLs for links in the
+documentation. If a link changes, this means you can update a single page and
+fix the link everywhere it appears.
+
+There are two places we recommend you place links
+
+ - `cyverse_rst_defined_substitutions.txt` - This is a list of common
+    CyVerse-related links (like our homepage or commonly cites URLS like
+    learning center articles).
+ - `custom_urls` - You can place all of the URLS particular to your repo in
+    in this one file, making them easier to manage.
+
+Not all repos will meet this standard and that's OK, although the upgrade is a
+change to move towards better compliance.
 
 ### Steps
 
-1. CyVerse [documentation templates](https://github.com/CyVerse-learning-materials) contain the directive (if you don't have this line add it)
+1. CyVerse
+   [documentation templates](https://github.com/CyVerse-learning-materials)
+   contain the directive (if you don't have this line add it)
 
        .. include:: cyverse_rst_defined_substitutions.txt
 
-2. Your documentation template should also contain the file `cyverse_rst_defined_substitutions.txt`
+2. Your documentation template should also contain the file
+   `cyverse_rst_defined_substitutions.txt`
 
 3. As you create your documentation, add your URLs to the
        `cyverse_rst_defined_substitutions.txt` file in this format
@@ -93,6 +122,10 @@ a few ways, but the preferred way is to use a [substitution](https://docutils.so
 ### Tips and adding to this master file
 
 
-1. Unfortunately all repos cannot automatically copy from this master file. If the `cyverse_rst_defined_substitutions.txt` file in this repo is newer than the one in your template, you will need to manually copy it. We will update the templates on a regular basis.
+1. Unfortunately all repos cannot automatically copy from this master file. If
+   the `cyverse_rst_defined_substitutions.txt` file in this repo is newer than
+   the one in your template, you will need to manually copy it. We will update
+   the templates on a regular basis.
 
-2. When adding to the `cyverse_rst_defined_substitutions.txt` file in this repo try to keep this alphabetical.
+2. When adding to the `cyverse_rst_defined_substitutions.txt` file in this repo
+   try to keep this alphabetical.
