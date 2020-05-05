@@ -3,9 +3,6 @@
 In this repo are some configuration files needed to bring existing repos to
 the Learning Center 2.0 spec.  
 
-This repo contains a master list of URLs that all CyVerse learning materials can
-pull from.
-
 
 ## 2.0 Upgraded Files
 
@@ -35,35 +32,47 @@ In many cases you can atomatically upgrade an existing repo to the 2.0 spec.
 Here are the steps.
 
 1. Clone this repo to a location on your computer
-   (e.g. `~/local_cyverse_learning_center`)
 
-       $ cd ~/local_cyverse_learning_center
        $ git clone https://github.com/CyVerse-learning-materials/learning-center-2.0-release.git
 
-2. Clone the learning center repo(s) you want to upgrade (e.g. `my_quickstart`)
+2. Make a directory to contain the repo(s) you wish to upgrade
 
-       $ git clone REPO GIT URL
+       $ mkdir repos_to_upgrade
 
-3. Create a textfile called `repos.txt` each line in the file should be the path
-   to the repo(s) you want to upgrade. For example if you downloaded
-   `my_quickstart_1`, `my_quickstart_2`, `my_quickstart_3`
-   to `~/local_cyverse_learning_center` you could generate this textfile as
-   follows:
+3. In the directory you have created, clone the repo(s) you wish to upgrade
 
-       $ cd ~/local_cyverse_learning_center$
-       $ ls -d */ | sed 's#/##' >>repos.txt
+       $ cd repos_to_upgrade
+       $ git clone repo_1_url.git
+       $ git clone repo_2_url.git
+       $ git clone repo_3_url.git
 
-4. Run the `upgrade.sh` script
+3. You should now have a directory which contains your git repository (you
+   may or may not have `tree` command but as long as you have this setup you
+   are fine).
 
-       $ bash upgrade.sh
+       $ tree -L 1 repos_to_upgrade/
 
-5. This script will copy new files/versions into the repo and attempt to replace
+         repos_to_upgrade/
+         ├── repo_1
+         ├── repo_2
+         └── repo_3
+
+4. Change back into this `learning-center-2.0-release` directory
+
+       $ cd ../learning-center-2.0-release
+
+5. Run the upgrade script using the `-d` option to specify the directory with
+   your repo(s)
+
+        $ bash upgrade.sh -d ../repos_to_upgrade
+
+6. This script will copy new files/versions into the repo and attempt to replace
    some of the logos and texts in existing files. **This may break the repo to
    be upgraded**. An HTML file with a preview build will be created (e.g.
-     `my_repo/_build`). Please preview every page in the repo and ensure things
-     look good.
+   `my_repo/_build`). Please preview every page in the repo and ensure things
+   look good.
 
-6. Once you have made changes, push the needed repo back to github. Then create
+7. Once you have made changes, push the needed repo back to github. Then create
    an issue (there should now be a template issue `Triage for Release`). Create
    the issue (**Please make sure the repo name is in the issue title**). Do your
    best to complete the checklist and then notify Tutorials@cyverse.org your
