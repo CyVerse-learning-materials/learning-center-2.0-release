@@ -67,4 +67,5 @@ while IFS= read -r line
     grep -qxF "    app.add_javascript('intercom-script-for-learning.js')" $repo/misc/cyverse_sphinx_conf.py || echo "    app.add_javascript('intercom-script-for-learning.js')" >> $repo/misc/cyverse_sphinx_conf.py
     echo "make the first HTML build for you to preview"
     cd $repo && make html
+    cd ..
 done < repos.txt
