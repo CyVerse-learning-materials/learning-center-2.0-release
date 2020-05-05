@@ -261,8 +261,7 @@ Once you have built your documentation, notify
 [Tutorials@CyVerse.org](mailto:Tutorials@CyVerse.org) that your tutorial is
 ready for inclusion in the main CyVerse documentation repo. We will review and
 verify the contribution, and add you as a maintainer repo in the CyVerse
-collection. You should make future edits following the instructions above for
-'Fixing and/or improving documentation via GitHub.' Alternatively, you can host
-your tutorial independently on ReadTheDocs following their
+collection. Alternatively, you can host your tutorial independently on
+ReadTheDocs following their
 [instructions for importing documentation](https://docs.readthedocs.io/en/latest/getting_started.html#import-your-docs). We will also follow up about ensuring test data associated with the
 documentation are available and open.
