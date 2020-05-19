@@ -28,28 +28,30 @@ while IFS= read -r line
     repo=$line
     echo "Upgrading" $repo_directory$repo
     mkdir -p $repo_directory$repo/.github/ISSUE_TEMPLATE/
-    echo "Copying 1 of 11 - triage-for-2-0-release.md to" $repo_directory$repo
+    echo "Copying 1 of 12 - triage-for-2-0-release.md to" $repo_directory$repo
     cp $WORK/triage-for-2-0-release.md $repo_directory$repo/.github/ISSUE_TEMPLATE/
-    echo "Copying 2 of 11 - cyverse.css to" $repo_directory$repo
+    echo "Copying 2 of 12 - cyverse.css to" $repo_directory$repo
     cp $WORK/cyverse.css $repo_directory$repo/misc/static/
-    echo "Copying 3 of 11 - cyverse.js to" $repo_directory$repo
+    echo "Copying 3 of 12 - cyverse.js to" $repo_directory$repo
     cp $WORK/cyverse.js $repo_directory$repo/misc/static/
-    echo "Copying 4 of 11 - detail-expand.css to" $repo_directory$repo
+    echo "Copying 4 of 12 - detail-expand.css to" $repo_directory$repo
     cp $WORK/detail-expand.css $repo_directory$repo/misc/static/
-    echo "Copying 5 of 11 - intercom-script-for-learning.js to" $repo_directory$repo
+    echo "Copying 5 of 12 - intercom-script-for-learning.js to" $repo_directory$repo
     cp $WORK/intercom-script-for-learning.js $repo_directory$repo/misc/static/
-    echo "Copying 6 of 11 - question-answer.js to" $repo_directory$repo
+    echo "Copying 6 of 12 - question-answer.js to" $repo_directory$repo
     cp $WORK/question-answer.js $repo_directory$repo/misc/static/
-    echo "Copying 7 of 11 - jquery.tablesorter.min.js to" $line
+    echo "Copying 7 of 12 - jquery.tablesorter.min.js to" $line
     cp $WORK/jquery.tablesorter.min.js $repo_directory$repo/misc/static/
-    echo "Copying 8 of 11 - custom_urls.txt to" $repo_directory$repo
+    echo "Copying 8 of 12 - custom_urls.txt to" $repo_directory$repo
     cp $WORK/custom_urls.txt $repo_directory$repo/
-    echo "Copying 9 of 11 - cyverse_learning.png to" $repo_directory$repo
+    echo "Copying 9 of 12 - cyverse_learning.png to" $repo_directory$repo
     cp $WORK/img/cyverse_learning.png $repo_directory$repo/img/cyverse_learning.png
-    echo "Copying 10 of 11 - intercom.png to" $repo_directory$repo
+    echo "Copying 10 of 12 - intercom.png to" $repo_directory$repo
     cp $WORK/img/intercom.png $repo_directory$repo/img/intercom.png
-    echo "Copying 11 of 11 - License.md to" $repo_directory$repo
+    echo "Copying 11 of 12 - License.md to" $repo_directory$repo
     cp $WORK/License.md $repo_directory$repo/License.md
+    echo "Copying 12 of 12 - Powered-By-CyVerse-blue.png to" $repo_directory$repo
+    cp $WORK/img/Powered-By-CyVerse-blue.png $repo_directory$repo/img/Powered-By-CyVerse-blue.png
     echo "Add defined cyverse_rst_defined_substitutions if needed"
     test -f $repo_directory$repo/cyverse_rst_defined_substitutions.txt|| cp $WORK/cyverse_rst_defined_substitutions.txt $repo_directory$repo/
     echo "fix logo"
@@ -74,7 +76,7 @@ while IFS= read -r line
     perl -i -p0e "s/copyright = \'2019,/copyright = \'2020,/smg" $repo_directory$repo/misc/cyverse_sphinx_conf.py
     perl -i -p0e "s/copyright = \'2018,/copyright = \'2020,/smg" $repo_directory$repo/misc/cyverse_sphinx_conf.py
     perl -i -p0e "s/copyright = \'2017,/copyright = \'2020,/smg" $repo_directory$repo/misc/cyverse_sphinx_conf.py
-    echo "add needed calls to css and js to cyverse_sphinx_conf.py"
+    echo "if needed add calls to css and js to cyverse_sphinx_conf.py"
     grep -qxF "    app.add_stylesheet('cyverse.css')" $repo_directory$repo/misc/cyverse_sphinx_conf.py || echo "    app.add_stylesheet('cyverse.css')" >> $repo_directory$repo/misc/cyverse_sphinx_conf.py
     grep -qxF "    app.add_stylesheet('detail-expand.css')" $repo_directory$repo/misc/cyverse_sphinx_conf.py || echo "    app.add_stylesheet('detail-expand.css')" >> $repo_directory$repo/misc/cyverse_sphinx_conf.py
     grep -qxF "    app.add_stylesheet('question-answer.css')" $repo_directory$repo/misc/cyverse_sphinx_conf.py || echo "    app.add_stylesheet('question-answer.css')" >> $repo_directory$repo/misc/cyverse_sphinx_conf.py
