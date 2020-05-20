@@ -162,7 +162,7 @@ some software.
    install these requirements. If you run into problems try this with
    the whole `requirements.txt`
 
-        $ pip install -r /readthedocstools/minimal_requirements.txt
+        $ pip3  install -r /readthedocstools/minimal_requirements.txt
 
 4. git - We use git to version control our documentation and manage with GitHub
     - https://git-scm.com/book/en/v2/Getting-Started-Installing-Git

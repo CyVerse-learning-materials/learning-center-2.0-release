@@ -65,6 +65,7 @@ while IFS= read -r line
     perl -i -p0e 's/\*\*Fix.*org>`_/\*\*Fix or improve this documentation\*\*\n\n- Search for an answer:\n  \|CyVerse Learning Center\|\n- Ask us for help:\n  click \|Intercom\| on the lower right-hand side of the page\n- Report an issue or submit a change:\n  \|Github Repo Link\|\n- Send feedback: `Tutorials\@CyVerse.org <Tutorials\@CyVerse.org>`_\n/smg' $repo_directory$repo/*.rst
     perl -i -p0e 's/Search for an answer.*wiki.cyverse.org>`_//smg' $repo_directory$repo/*.rst
     perl -i -p0e 's/Post your question to the user forum.*questions>`_//smg' $repo_directory$repo/*.rst
+    perl -i -p0e 's/Tutorials@CyVerse.org/learning@CyVerse.org/smg' $repo_directory$repo/*.rst
     echo "fix version numbers and copyright year in config files"
     perl -i -p0e "s/version = \'1.0\'/version = \'2.0\'/smg" $repo_directory$repo/conf.py
     perl -i -p0e "s/release = \'1.0\'/version = \'2.0\'/smg" $repo_directory$repo/conf.py
