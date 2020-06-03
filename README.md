@@ -155,10 +155,30 @@ change to move towards better compliance.
    try to keep this alphabetical.
 
 
-## Building Documentation from Scratch (local install)
+## Building Documentation from Scratch
 
-If you want to go beyond just creating a markdown file, you will need to install
-some software.
+**You will need the following accounts**
+
+1. GitHub account - makes it possible to collaborate on the documentation:
+    - https://github.com/
+
+### Obtaining the template
+
+1. Choose one of the template repositories at https://github.com/CyVerse-learning-materials/
+   (these are pinned at the top of this page). Click the **Use this template**
+   button. Name your repo for the name of your documentation e.g.
+   *'name_tutorial'*. You may choose public or private. There is no need to
+   include all branches (leave unchecked).
+
+2. Once you have a new repo made from the template, clone this new repo
+   to your local machine for editing.
+
+        $git clone MY-TUTORIAL
+
+### Authoring tools (local install)
+
+In order to build our documentation you can install the authoring tools or
+skip this section and use the Docker container we have built.
 
 **You will need the following software**
 
@@ -171,49 +191,34 @@ some software.
    the Python package installer 'pip' so Python must be installed first); we
    will also install the theme we need for our documentation
 
-   **Note** You can use the `minimal_requirements.txt` in /readthedocstools to
+   **Note** You can use the [`minimal_requirements.txt`](https://raw.githubusercontent.com/CyVerse-learning-materials/learning-center-2.0-release/master/readthedocstools/minimal_requirements.txt) in /readthedocstools to
    install these requirements. If you run into problems try this with
-   the whole `requirements.txt`
+   the whole [`requirements.txt`](https://raw.githubusercontent.com/CyVerse-learning-materials/learning-center-2.0-release/master/readthedocstools/requirements.txt) - both of which are in the
+   [learning-center-2.0-release](https://github.com/CyVerse-learning-materials/learning-center-2.0-release)
+   repo (see `/readthedocstools` in that repo).
 
-        $ pip3  install -r /readthedocstools/minimal_requirements.txt
+        $ pip3 install -r /readthedocstools/minimal_requirements.txt
 
 4. git - We use git to version control our documentation and manage with GitHub
     - https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
 
-**You will need the following accounts**
+#### Editing the template
 
-1. GitHub account - makes it possible to collaborate on the documentation:
-    - https://github.com/
-
-### Obtaining the template
-
-1. **Import** (not clone) the CyVerse base tutorial repo following GitHub's
-   directions here: https://help.github.com/articles/importing-a-repository-with-github-importer/
-    - Choose one of the template repositories at https://github.com/CyVerse-learning-materials/
-      (these repositories are pinned and labeled with topic `template`)
-    - Name your repo for the name of your documentation e.g. *'name_tutorial'*
-
-2. Once you have a locally imported copy of the template, clone this new repo
-   to your local machine for editing.
-
-        $git clone MY-TUTORIAL
-
-### Editing the template
-
-1. Edit the **index.rst**. Save images or other files in the appropriate
-   directories. **See the recommended style guide in the template.**
+1. Edit the **index.rst** and other files as needed. Save images or other files
+   in the appropriate directories. **See the recommended style guide in the template.**
 
 2. Since tutorials will likely span multiple pages, you can copy internal pages
    page as many times as needed. Update the table of contents at the top of the
-   'index.rst' accordingly. We will have **only one tutorial or quick start per repo.**
+   'index.rst' accordingly. We will have **only documentation piece per repo.**
 
-3. Save your work:
+3. Save your work such as:
     - individual pages (e.g. `index.rst`, `step2.rst`)
     - images (as `.png` files in the  the `/img` folder)
     - changes or additions to `cyverse_rst_defined_substitutions.txt` and
-      `cyverse_rst_defined_substitutions.txt`
+      `custom_urls.txt`
 
-4. Edit the `conf.py` file to set the project and author information
+4. Edit the `conf.py` and `/misc/cyverse_sphinx_conf.py` files to set the
+   project and author information
 
 5. Build the tutorial:
 
@@ -227,28 +232,25 @@ some software.
          $ sphinx-autobuild -b html --host 0.0.0.0 --port 8000 --poll . _build_html
       ````
 
-6. Your HTML site will be in the `_build_html` directory that has been created (you can
-   preview this in your web browser at this time).
+6. Your HTML site will be in the `_build_html` or `_build` directory that has
+   been created (you can preview this in your web browser at this time).
 
 7. Commit your changes and push the tutorial back to GitHub.
 
 
-## Building Documentation from Scratch (Docker)
+### Authoring tools (Docker)
 
 For your convenience, all of the documentation software has been packed in
 a Docker container.
 
-1. Follow steps 1-2 from the "Obtaining and editing the template" section above.
-
-
-2. If needed, install Docker (See [Get Docker](https://docs.docker.com/get-docker/))
+1. If needed, install Docker (See [Get Docker](https://docs.docker.com/get-docker/))
    then pull the Docker image:
 
      ````
         $ docker pull jasonjwilliamsny/cyverse-learning-materials-tools:1.0
      ````
 
-3. Run the container interactively (`-it`). Map port 8000 inside the container to
+2. Run the container interactively (`-it`). Map port 8000 inside the container to
    port 8000 outside (`-p 8000:8000`) and use the volume command (`-v`) to
    mount the container to a directory of your choice. This directory should be
    the place where you cloned your repo in step 1 of this section.  You will
@@ -260,7 +262,7 @@ a Docker container.
      ````
 4. From inside the Docker container bash terminal, navigate to the
    mounted directory (e.g. `DOCKERDOCUMENTATION`). You should see your cloned
-   respository there. You can now follow the steps in the
+   repository there. You can now follow the steps in the
    `Obtaining the template` section with the following modifications:
 
    - To preview your documentation, from **inside the docker container** use the
@@ -277,6 +279,8 @@ a Docker container.
       to the documentation, the browser should automatically update within
       a few seconds of making the change.
 
+5. Follow the directions in the "Editing the template" section above.
+
 ## Wrapping up and hosting documentation in the Learning Center
 
 Once you have built your documentation, notify
@@ -287,3 +291,53 @@ collection. Alternatively, you can host your tutorial independently on
 ReadTheDocs following their
 [instructions for importing documentation](https://docs.readthedocs.io/en/latest/getting_started.html#import-your-docs). We will also follow up about ensuring test data associated with the
 documentation are available and open.
+
+### Documentation Style Guide
+
+*General Principles*
+
+- Write instructions in short numbered steps
+- Where possible limit step to one action; small final actions such as
+  'press submit' should be separated by a semicolon
+- Limit the use of screenshots; where they are needed, use ReStructured text
+  directives for [substitution of images](http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html#substitution-definitions)
+- Use the *'raw ::html'* directive to enter hyperlinks so that they will open
+  in a new tab. See each repo for an example of the code
+- Example data associated with documentation should be anonymously available on
+  CyVerse Data Commons (Tutorials@cyverse.org can help you with this)
+- Discovery Environment applications should be directly linked to documentation
+  (clicking the 'info' button on any application will give you the 'App URL')
+- Atmosphere images should be directly linked to documentation
+  (e.g. "atmo.cyverse.org/application/images/####"
+
+*Specific examples*
+
+|Instruction|Example|
+|-----------|-------|
+|Steps generally begin with a verb or preposition|<ul><li>Click on the button<li>Under the "Result" menu</ul>|
+|Locations of files are given in absolute paths|<ul><li>/dir1/dir2/file.extension</ul>|
+|Top-level menus in Discovery Environment Apps in double quotes|<ul><li>Under "Input" select...</ul>|
+|Subheadings/steps in Discovery Environment Apps in single quotes|<ul><li>For 'sensitivity' enter...</ul>|
+|Buttons and keywords in bold|<ul><li>Click on **Apps**<li>Select **Arabidopsis**<li>Set 'sensitivity' to **Medium**</ul>|
+
+
+## Sample and test data for Learning Center materials
+
+**ALL** materials with sample or test data on the Learning Center should be  
+available with anonymous/public read access at /iplant/home/shared/cyverse_training
+
+````
+/iplant/home/shared/cyverse_training:
+  C- /iplant/home/shared/cyverse_training/classrooms
+  C- /iplant/home/shared/cyverse_training/cyverse_austria_training
+  C- /iplant/home/shared/cyverse_training/datasets
+  C- /iplant/home/shared/cyverse_training/example
+  C- /iplant/home/shared/cyverse_training/manuals
+  C- /iplant/home/shared/cyverse_training/platform_guides
+  C- /iplant/home/shared/cyverse_training/quickstarts
+  C- /iplant/home/shared/cyverse_training/tutorials
+  C- /iplant/home/shared/cyverse_training/workshop_materials
+````
+
+In general, data should be in the appropriate `manuals`,`platform_guides`,
+`quickstarts`, `tutorials`, or `workshop_materials` folders. 
