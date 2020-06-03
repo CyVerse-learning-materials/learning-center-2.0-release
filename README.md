@@ -24,11 +24,20 @@ the Learning Center 2.0 spec.
 \* - These files may have some project-specific features so you should not
 automatically copy over existing files.
 
+### Organizing repos
 
+The script `organize_repos.sh` is designed to take a list of repo git urls
+(e.g. https://github.com/CyVerse-learning-materials/trimmomatic_quickstart.git),
+clone those repositories, create a branch for the new release, and commit that
+branch back to GitHub
+
+**FOR THE 2.0 RELEASE ALL WORK SHOULD BE DONE ON THE BRANCH `learning_center_2_0_release_candidate`**
+Once the repo passes triage (from the 2.0 release template issue) the work
+can be merged to master. Then a 2.0 release can be created.
 
 ### Upgrading a Repo to 2.0
 
-In many cases you can atomatically upgrade an existing repo to the 2.0 spec.
+In many cases you can automatically upgrade an existing repo to the 2.0 spec.
 Here are the steps.
 
 1. Clone this repo to a location on your computer
@@ -78,6 +87,10 @@ Here are the steps.
    best to complete the checklist and then notify Tutorials@cyverse.org your
    repo is ready for the 2.0 release.
 
+
+**FOR THE 2.0 RELEASE ALL WORK SHOULD BE DONE ON THE BRANCH `learning_center_2_0_release_candidate`**
+Once the repo passes triage (from the 2.0 release template issue) the work
+can be merged to master. Then a 2.0 release can be created on GitHub.  
 
 
 ## How to maintain links in CyVerse learning materials

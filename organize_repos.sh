@@ -18,9 +18,9 @@ while [[ "$#" -gt 0 ]]; do
   echo "Using the list of github repos $urls_list"
 done
 
-mkdir ~/cyverse_learning_2_0_release
-cp $urls_list ~/cyverse_learning_2_0_release
-cd ~/cyverse_learning_2_0_release
+mkdir ~/Dropbox/cyverse_learning_2_0_release
+cp $urls_list ~/Dropbox/cyverse_learning_2_0_release
+cd ~/Dropbox/cyverse_learning_2_0_release
 
 # clone repos to upgrade
 
