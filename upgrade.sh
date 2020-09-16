@@ -54,6 +54,8 @@ while IFS= read -r line
     cp $WORK/img/Powered-By-CyVerse-blue.png $repo_directory$repo/img/Powered-By-CyVerse-blue.png
     echo "Add defined cyverse_rst_defined_substitutions if needed"
     test -f $repo_directory$repo/cyverse_rst_defined_substitutions.txt|| cp $WORK/cyverse_rst_defined_substitutions.txt $repo_directory$repo/
+    echo "Add include statement for cyverse_rst_defined_substitutions if needed"
+    for page in $repo_directory$repo/*.rst; do grep -q ".. include:: cyverse_rst_defined_substitutions.txt" $page || perl -pi -e 'print ".. include:: cyverse_rst_defined_substitutions.txt\n" if $. == 1' $page; done
     echo "fix logo"
     perl -i -p0e 's/\|CyVerse logo\|_/\|CyVerse_logo\|_/smg' $repo_directory$repo/*.rst
     perl -i -p0e 's/\|CyVerse logo\| image:: .\/img\/cyverse_rgb.png/\|CyVerse_logo\| image:: .\/img\/cyverse_learning.png/smg' $repo_directory$repo/cyverse_rst_defined_substitutions.txt
