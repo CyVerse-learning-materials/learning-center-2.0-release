@@ -37,7 +37,7 @@ items.
     `Learning Center Home <http://learning.cyverse.org/>`_
     ````
 - [ ] Documentation contains maintainer info on `index.rst` or the appropriate
-  first page
+  first page. This should be placed directly before the table of contents. 
 
     ````
     Manual Maintainer(s)
