@@ -32,10 +32,9 @@ while IFS= read -r line
     cd $repo_directory$repo
     git switch master
     git pull
-    rm -rf github
-    rm -rf .github
-    wget https://raw.githubusercontent.com/CyVerse-learning-materials/learning-center-2.0-release/master/.github/ISSUE_TEMPLATE/triage-for-2-0-release.md
+    wget https://raw.githubusercontent.com/CyVerse-learning-materials/learning-center-2.0-release/master/triage-for-2-0-release.md
     mkdir -p .github/ISSUE_TEMPLATE/
+    rm -f github/ISSUE_TEMPLATE/triage-for-2-0-release.md
     mv triage-for-2-0-release.md .github/ISSUE_TEMPLATE/
     git add .github
     git commit -am "add triage issue template"
