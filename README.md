@@ -340,4 +340,4 @@ available with anonymous/public read access at /iplant/home/shared/cyverse_train
 ````
 
 In general, data should be in the appropriate `manuals`,`platform_guides`,
-`quickstarts`, `tutorials`, or `workshop_materials` folders. 
+`quickstarts`, `tutorials`, or `workshop_materials` folders.

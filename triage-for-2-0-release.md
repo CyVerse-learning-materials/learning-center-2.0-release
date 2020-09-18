@@ -1,6 +1,6 @@
 ---
 name: Triage for Release
-about: Describe this issue template's purpose here.
+about: Checklist for upgrading to Learning Center 2.0
 title: Triage for [Project Title] Release [X.X.X]
 labels: 2.0 Release
 assignees: ''
@@ -15,6 +15,7 @@ items.
 - [ ] `misc/static/cyverse.css` is version 2.0
 - [ ] `misc/static/cyverse.js` is version 2.0
 - [ ] `misc/static/detail-expand.css` is version 2.0
+- [ ] `misc/static/detail-expand.js` is version 2.0
 - [ ] `misc/static/intercom-script-for-learning.js` is version 2.0
 - [ ] `misc/static/question-answer.js` is version 2.0
 - [ ] `misc/static/jquery.min.js` is version 2.0
